@@ -1,0 +1,11 @@
+Completed till Task 5.
+1. Print each name
+console.log(scores.map(({name}) => name));
+2.  >=40 pass.. find those student that passed (Use array method)
+console.log(scores.filter((elem)=>{if(elem.marks>=40) return elem}));
+3.   Find all the names who failed the exams (Array methods)
+console.log(scoress.filter((elem)=>{if(elem.marks<40) return elem}).map(({name}) => name));
+4. Find the Average marks
+console.log(((scores.map(({marks}) => marks)).reduce((prev,curr)=> prev+curr, 0))/scores.length);
+5. Find the topper's name
+console.log((scoress.map(({marks}) => marks)).reduce((prev,curr)=>prev>curr?prev:curr, -1));
