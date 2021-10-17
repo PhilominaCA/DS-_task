@@ -1,11 +1,28 @@
 Completed till Task 5.
+
 1. Print each name
 console.log(scores.map(({name}) => name));
+
 2.  >=40 pass.. find those student that passed (Use array method)
 console.log(scores.filter((elem)=>{if(elem.marks>=40) return elem}));
+
 3.   Find all the names who failed the exams (Array methods)
-console.log(scoress.filter((elem)=>{if(elem.marks<40) return elem}).map(({name}) => name));
+console.log(scores.filter((elem)=>{if(elem.marks<40) return elem}).map(({name}) => name));
+
 4. Find the Average marks
 console.log(((scores.map(({marks}) => marks)).reduce((prev,curr)=> prev+curr, 0))/scores.length);
+
 5. Find the topper's name
-console.log((scoress.map(({marks}) => marks)).reduce((prev,curr)=>prev>curr?prev:curr, -1));
+console.log((scores.map(({marks}) => marks)).reduce((prev,curr)=>prev>curr?prev:curr, -1));
+
+
+
+//corrected/simplified  code in class..
+2. console.log(scores.filter(({marks})=> marks>=40)) //simple way using destructuring
+
+3. console.log(scores.filter(({marks})=> marks<40 ).map(({name}) => name));
+
+4. console.log(scores.reduce((sum,{marks}) => sum+marks ,0);
+
+5. allMarks = scores.map(({marks}) => marks)
+console.log((scores.reduce((prev,curr)=> prev.marks>curr.marks?prev:curr)).name);
